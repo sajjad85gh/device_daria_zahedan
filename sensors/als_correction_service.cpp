@@ -18,6 +18,7 @@
 
 #include <android-base/file.h>
 #include <binder/ProcessState.h>
+#include <gui/AidlUtil.h>
 #include <gui/SurfaceComposerClient.h>
 #include <gui/SyncScreenCaptureListener.h>
 #include <ui/DisplayState.h>
@@ -38,6 +39,7 @@ using android::ScreenshotClient;
 using android::sp;
 using android::SurfaceComposerClient;
 using android::base::WriteStringToFile;
+using android::gui::aidl_utils::toARect;
 using android::gui::ScreenCaptureResults;
 using android::ui::DisplayState;
 using android::ui::PixelFormat;
@@ -73,15 +75,15 @@ void updateScreenBuffer() {
 
     sp<IBinder> display = getInternalDisplayToken();
 
-    DisplayCaptureArgs captureArgs;
-    captureArgs.displayToken = getInternalDisplayToken();
-    captureArgs.pixelFormat = PixelFormat::RGBA_8888;
-    captureArgs.sourceCrop = Rect(
+    DisplayCaptureArgs displayCaptureArgs;
+    displayCaptureArgs.displayToken = getInternalDisplayToken();
+    displayCaptureArgs.captureArgs.pixelFormat = PixelFormat::RGBA_8888;
+    displayCaptureArgs.captureArgs.sourceCrop = Rect(
             ALS_POS_X - ALS_RADIUS, ALS_POS_Y - ALS_RADIUS,
             ALS_POS_X + ALS_RADIUS, ALS_POS_Y + ALS_RADIUS);
-    captureArgs.width = ALS_RADIUS * 2;
-    captureArgs.height = ALS_RADIUS * 2;
-    captureArgs.captureSecureLayers = true;
+    displayCaptureArgs.width = ALS_RADIUS * 2;
+    displayCaptureArgs.height = ALS_RADIUS * 2;
+    displayCaptureArgs.captureArgs.captureSecureLayers = true;
 
     DisplayState state;
     SurfaceComposerClient::getDisplayState(display, &state);
@@ -112,7 +114,7 @@ void updateScreenBuffer() {
             captureResults.buffer->unlock();
         }, 500);
 
-    ScreenshotClient::captureDisplay(captureArgs, captureListener);
+    ScreenshotClient::captureDisplay(displayCaptureArgs, captureListener);
     ALOGV("Capture started at %ld", now.tv_sec);
 
     lastScreenUpdate = now.tv_sec;
