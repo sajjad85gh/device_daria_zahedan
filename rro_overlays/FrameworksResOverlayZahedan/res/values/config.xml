@@ -416,6 +416,9 @@
         orientation. If zero, the value of rounded_corner_radius is used. -->
     <dimen name="rounded_corner_radius_bottom">60.0px</dimen>
 
+    <!-- Default paddings for content around the corners. -->
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
+
     <!-- Display cutout configuration -->
     <string name="config_mainBuiltInDisplayCutout">M -33,0 L -33,88 L 33,88 L 33,0 Z</string>
     <string name="config_mainBuiltInDisplayCutoutRectApproximation">@string/config_mainBuiltInDisplayCutout</string>
