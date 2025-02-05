@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
     libdrm.vendor \
     libdrm \
     libexpat.vendor \
+    libprocessgroup.vendor \
     disable_configstore
 
 # Fastbootd
