@@ -147,8 +147,8 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # FM radio
-PRODUCT_PACKAGES += \
-    FMRadio
+#PRODUCT_PACKAGES += \
+#    FMRadio
 
 # Health
 PRODUCT_PACKAGES += \
