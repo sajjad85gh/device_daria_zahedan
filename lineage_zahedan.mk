@@ -11,10 +11,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/daria/zahedan/device.mk)
 
-# Inherit some common LMODroid stuff.
-$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+WITH_GMS := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_STOCK_AICORE := false
+TARGET_SUPPORTS_WALLEFFECT := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+ 
+# Pixel Launcher
+TARGET_INCLUDE_NEXUS := false
+ 
+# Maintainer
+MATRIXX_MAINTAINER := Itis_Sajjad
 
-PRODUCT_NAME := lmodroid_zahedan
+PRODUCT_NAME := lineage_zahedan
 PRODUCT_DEVICE := zahedan
 PRODUCT_MANUFACTURER := Daria
 PRODUCT_BRAND := Daria
