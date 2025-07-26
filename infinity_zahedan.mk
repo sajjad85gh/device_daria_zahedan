@@ -12,9 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/daria/zahedan/device.mk)
 
 # Inherit some common LMODroid stuff.
-$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lmodroid_zahedan
+# Maintainer Name
+INFINITY_MAINTAINER := "Itis_Sajjad"
+
+# Whether the package includes System BLURS
+TARGET_SUPPORTS_BLUR := true
+
+PRODUCT_NAME := infinity_zahedan
 PRODUCT_DEVICE := zahedan
 PRODUCT_MANUFACTURER := Daria
 PRODUCT_BRAND := Daria

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lmodroid_zahedan.mk
+    $(LOCAL_DIR)/infinity_zahedan.mk
 
 COMMON_LUNCH_CHOICES := \
-    lmodroid_zahedan-user \
-    lmodroid_zahedan-userdebug \
-    lmodroid_zahedan-eng
+    infinity_zahedan-user \
+    infinity_zahedan-userdebug \
+    infinity_zahedan-eng

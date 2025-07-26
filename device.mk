@@ -315,12 +315,12 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lmodroid
+    $(LOCAL_PATH)/overlay-infinity
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lmodroid
+    $(LOCAL_PATH)/overlay-infinity
 
 PRODUCT_PACKAGES += \
     LMODroidEdgeCutout \
