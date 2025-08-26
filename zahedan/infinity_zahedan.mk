@@ -15,9 +15,13 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayZahedan
 
 # Inherit some common lineage stuff.
-$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+# Maintainer Name
+INFINITY_MAINTAINER := "Itis_Sajjad"
 
-PRODUCT_NAME := lmodroid_zahedan
+# Whether Including Google Apps
+WITH_GAPPS := false
+PRODUCT_NAME := infinity_zahedan
 PRODUCT_DEVICE := zahedan
 PRODUCT_MANUFACTURER := Daria
 PRODUCT_BRAND := Daria

@@ -5,13 +5,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    lmodroid_zahedan:$(LOCAL_DIR)/zahedan/lmodroid_zahedan.mk \
-    lmodroid_algiz:$(LOCAL_DIR)/algiz/lmodroid_algiz.mk
+    infinity_zahedan:$(LOCAL_DIR)/zahedan/infinity_zahedan.mk \
+    infinity_algiz:$(LOCAL_DIR)/algiz/infinity_algiz.mk
 
 COMMON_LUNCH_CHOICES := \
-    lmodroid_zahedan-user \
-    lmodroid_zahedan-userdebug \
-    lmodroid_zahedan-eng \
-    lmodroid_algiz-user \
-    lmodroid_algiz-userdebug \
-    lmodroid_algiz-eng
+    infinity_zahedan-user \
+    infinity_zahedan-userdebug \
+    infinity_zahedan-eng \
+    infinity_algiz-user \
+    infinity_algiz-userdebug \
+    infinity_algiz-eng
