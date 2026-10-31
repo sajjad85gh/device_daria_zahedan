@@ -23,7 +23,7 @@
 /sys/devices/platform/14013000\.dsi/fcal										 u:object_r:sysfs_leds:s0
 
 # Vibrator
-/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.zahedan                                              u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.daria                                              u:object_r:hal_vibrator_default_exec:s0
 
 # Charger
 /sys/class/factory_charger/cmd_charge_disable                                                                            u:object_r:sysfs_charge_disable:s0

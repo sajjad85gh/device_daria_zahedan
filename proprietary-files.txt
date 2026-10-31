@@ -2097,3 +2097,8 @@ vendor/lib64/server_configurable_flags.so
 vendor/lib64/libspeexresampler.so
 vendor/lib64/android.hardware.audio.core-V2-ndk.so
 vendor/lib64/android.hardware.audio.core.sounddose-V2-ndk.so
+
+# Vibrator (stock Awinic FF HAL)
+vendor/bin/hw/android.hardware.vibrator-service.daria
+vendor/etc/init/vibrator-daria.rc
+vendor/etc/vintf/manifest/android.hardware.vibrator.daria.xml

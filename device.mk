@@ -484,7 +484,6 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.zahedan \
     android.hardware.vibrator-V2-ndk.vendor
 
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
