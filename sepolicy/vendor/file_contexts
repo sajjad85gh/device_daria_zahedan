@@ -37,8 +37,8 @@
 /sys/devices/platform/14013000\.dsi/fcal                                                       u:object_r:sysfs_leds:s0
 
 # LBS & VideoTelephony AIDL
-/(vendor|system/vendor)/bin/mtk_lbs_service                                                    u:object_r:mtk_lbs_service_exec:s0
-/(vendor|system/vendor)/bin/hw/vtservice_aidl                                                  u:object_r:mtk_hal_videotelephony_exec:s0
+/(vendor|system/vendor)/bin/mtk_lbs_service                                                    u:object_r:lbs_hidl_service_exec:s0
+/(vendor|system/vendor)/bin/hw/vtservice_aidl                                                  u:object_r:vtservice_hidl_exec:s0
 
 # Light & LiveDisplay
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.zahedan                      u:object_r:hal_light_default_exec:s0
